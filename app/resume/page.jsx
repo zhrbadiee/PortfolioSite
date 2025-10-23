@@ -176,7 +176,7 @@ export default function Resume(params) {
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
-
+            
             {/* exprience */}
             <TabsContent value="exprience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -287,10 +287,14 @@ export default function Resume(params) {
             {/* about */}
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold text-center">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">
+                    {about.title}
+                  </h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
