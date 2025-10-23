@@ -160,7 +160,7 @@ export default function Resume(params) {
         opacity: 1,
         transition: { delay: 2, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 "
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:mt-10 "
     >
       <div className="container mx-auto">
         <Tabs
@@ -285,7 +285,7 @@ export default function Resume(params) {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full">
+            <TabsContent value="about" className="w-full ">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">

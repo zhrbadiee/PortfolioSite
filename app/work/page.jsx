@@ -6,7 +6,7 @@ import {
   TooltipContent,
 } from "@/components/ui/tooltip";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; 
+import "swiper/css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -56,7 +56,7 @@ export default function Work(params) {
   const handleSlideChange = (swiper) => {
     //get current slide index
     const currentIndex = swiper.activeIndex;
-    
+
     //update project state based on current slide index
     setProject(projects[currentIndex]);
   };
@@ -146,7 +146,6 @@ export default function Work(params) {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
@@ -161,16 +160,21 @@ export default function Work(params) {
                           className="object-cover"
                           alt=""
                           fill
+                          sizes="(max-width: 640px) 600px, 
+               (max-width: 1024px) 1000px, 
+               1200px"
                         />
                       </div>
                     </div>
                   </SwiperSlide>
                 );
               })}
-              <WorkSliderBtn containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]
-              xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none " 
-              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px]
-              flex justify-center items-center transition-all"/>
+              <WorkSliderBtn
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]
+              xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px]
+              flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>
